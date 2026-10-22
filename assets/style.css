@@ -2,7 +2,8 @@
 :root {
   /* Merkblauw van Adiso, gelijk aan Note to Self */
   --adiso-blue: #1E5EFF;
-  --adiso-red: #EF2D2A;
+  /* Accent van Adiso, gelijk aan het oranje van Note to Self */
+  --adiso-accent: #FF6A1F;
   --ink: #111318;
   --muted: #4A4F5C;
   --bg: #FFFFFF;
@@ -46,7 +47,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* Adiso-hero */
 .hero { padding: 72px 0 56px; }
 .hero h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.08; margin: 0 0 20px; letter-spacing: -0.02em; }
-.hero h1 .dot { color: var(--adiso-red); }
+.hero h1 .dot { color: var(--adiso-accent); }
 .hero p { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0; }
 
 section { padding: 40px 0; }
