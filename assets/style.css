@@ -1,0 +1,112 @@
+/* Adiso – eenvoudige, snelle stijl zonder externe bestanden */
+:root {
+  /* Merkblauw van Adiso, gelijk aan Note to Self */
+  --adiso-blue: #1E5EFF;
+  --adiso-red: #EF2D2A;
+  --ink: #111318;
+  --muted: #4A4F5C;
+  --bg: #FFFFFF;
+  --soft: #F3F5FB;
+  --line: #E3E6EE;
+  --nts-blue: #1E5EFF;
+  --nts-orange: #FF6A1F;
+  --radius: 16px;
+  --max: 1040px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #EDEFF5;
+    --muted: #A9AEBB;
+    --bg: #0F1116;
+    --soft: #181B23;
+    --line: #262A35;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+a { color: var(--adiso-blue); }
+@media (prefers-color-scheme: dark) { a { color: #7F9BFF; } }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* Kop */
+.top { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+.top .logo img { height: 44px; width: auto; }
+.top nav { display: flex; gap: 20px; align-items: center; font-weight: 500; }
+.top nav a { color: var(--ink); text-decoration: none; }
+.top nav a:hover { color: var(--adiso-blue); }
+.lang { border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 14px; }
+
+/* Adiso-hero */
+.hero { padding: 72px 0 56px; }
+.hero h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.08; margin: 0 0 20px; letter-spacing: -0.02em; }
+.hero h1 .dot { color: var(--adiso-red); }
+.hero p { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0; }
+
+section { padding: 40px 0; }
+h2 { font-size: 28px; margin: 0 0 20px; letter-spacing: -0.01em; }
+
+/* App-kaart */
+.app-card {
+  display: grid; grid-template-columns: 120px 1fr; gap: 28px; align-items: center;
+  background: var(--soft); border: 1px solid var(--line); border-radius: 24px; padding: 28px;
+  text-decoration: none; color: inherit; transition: transform .15s ease, border-color .15s ease;
+}
+.app-card:hover { transform: translateY(-2px); border-color: var(--nts-blue); }
+.app-card img { width: 120px; height: 120px; border-radius: 26px; }
+.app-card h3 { margin: 0 0 6px; font-size: 24px; }
+.app-card p { margin: 0; color: var(--muted); }
+.app-card .tagline { color: var(--nts-orange); font-weight: 600; margin-bottom: 6px; }
+.more { margin-top: 12px; display: inline-block; font-weight: 600; color: var(--nts-blue); }
+@media (max-width: 560px) { .app-card { grid-template-columns: 1fr; text-align: center; } .app-card img { margin: 0 auto; } }
+
+/* Contact */
+.contact { background: var(--soft); border-radius: 24px; padding: 32px; border: 1px solid var(--line); }
+.contact p { margin: 0 0 8px; color: var(--muted); }
+.mail { font-size: 22px; font-weight: 600; text-decoration: none; }
+
+footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; }
+footer a { color: var(--muted); }
+
+/* Note to Self-pagina */
+.nts-hero { background: var(--nts-blue); color: #fff; }
+.nts-hero .top nav a, .nts-hero .top .back { color: #fff; }
+.nts-hero .lang { border-color: rgba(255,255,255,.5); }
+.nts-hero .inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 40px 0 72px; }
+.nts-hero .icon { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+.nts-hero h1 { font-size: clamp(38px, 6vw, 62px); line-height: 1.05; margin: 0 0 16px; letter-spacing: -0.02em; }
+.nts-hero h1 .accent { color: var(--nts-orange); }
+.nts-hero p { font-size: 20px; opacity: .92; margin: 0 0 28px; max-width: 520px; }
+.nts-hero .shot { max-width: 300px; justify-self: center; }
+.badge {
+  display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--nts-blue);
+  padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none;
+}
+.badge.soon { background: rgba(255,255,255,.16); color: #fff; border: 1px solid rgba(255,255,255,.45); }
+@media (max-width: 760px) { .nts-hero .inner { grid-template-columns: 1fr; } .nts-hero .shot { max-width: 260px; } }
+
+.features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+@media (max-width: 640px) { .features { grid-template-columns: 1fr; } }
+.feature { background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+.feature h3 { margin: 0 0 8px; font-size: 19px; }
+.feature h3::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--nts-orange); margin-right: 10px; vertical-align: middle; }
+.feature p { margin: 0; color: var(--muted); }
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.shots img { border-radius: 20px; }
+@media (max-width: 640px) { .shots { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; } }
+.privacy-box { border-left: 4px solid var(--nts-orange); padding: 4px 0 4px 20px; }
+
+/* Juridische tekst */
+.legal { max-width: 760px; padding: 24px 0 40px; }
+.legal h1 { font-size: 36px; margin: 16px 0 8px; }
+.legal h2 { font-size: 22px; margin: 32px 0 8px; }
+.legal .meta { color: var(--muted); margin: 0 0 24px; }
+
+/* Harde regelafbreking alleen op brede schermen */
+@media (max-width: 600px) { br.wide { display: none; } }
