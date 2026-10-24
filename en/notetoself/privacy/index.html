@@ -18,7 +18,7 @@
 
     <main class="legal">
       <h1>Note to Self privacy policy</h1>
-      <p class="meta">Last updated: 22 October 2026</p>
+      <p class="meta">Last updated: 24 October 2026</p>
 
       <p>Note to Self is an app by Adiso (the Netherlands). It lets you quickly email yourself a note. We keep it simple: the app collects as little as possible, everything stays on your phone, and Adiso has no servers of its own that your data passes through.</p>
 
@@ -42,6 +42,16 @@
       </ul>
       <p>This data is only used on your phone. It is not sent to Adiso or anyone else, not sold, not used for advertising and not used to train AI models.</p>
       <p>Note to Self's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+      <h2>How we protect your data</h2>
+      <ul>
+        <li><strong>Encrypted in transit.</strong> All connections to Google (sign-in, Gmail API) use HTTPS with TLS encryption. Link previews are also fetched over HTTPS wherever possible.</li>
+        <li><strong>No storage of Google passwords or tokens by the app.</strong> Sign-in and consent are handled by Google Play services. The app only receives a short-lived access token, uses it immediately to send the note and does not store it itself.</li>
+        <li><strong>Encrypted storage of your SMTP password.</strong> If you use your own mail server, your password is encrypted with AES-GCM using a key that stays in your phone's secure Android Keystore and cannot leave the device. The connection to your mail server is encrypted with SSL/TLS or STARTTLS, unless you deliberately choose an unencrypted connection in the settings.</li>
+        <li><strong>Isolated storage on your phone.</strong> Settings and notes that have not been sent yet are kept in the app's private storage, which other apps cannot access. Sent notes are deleted from the phone right away.</li>
+        <li><strong>No cloud backups.</strong> The app excludes its data from Android backups, so it never leaves your phone.</li>
+        <li><strong>Minimum permissions.</strong> The app only asks for permission to send email and to see your email address; no access to your mailbox, contacts or any other data.</li>
+      </ul>
 
       <h2>Third-party services</h2>
       <p>To sign in and send, the app uses Google Play services and Google's Gmail API, which are also covered by <a href="https://policies.google.com/privacy">Google's privacy policy</a>. The app contains no other third-party services for analytics or advertising.</p>

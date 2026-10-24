@@ -18,7 +18,7 @@
 
     <main class="legal">
       <h1>Privacybeleid Note to Self</h1>
-      <p class="meta">Laatst bijgewerkt: 22 oktober 2026</p>
+      <p class="meta">Laatst bijgewerkt: 24 oktober 2026</p>
 
       <p>Note to Self is een app van Adiso (Nederland). Met de app stuur je jezelf snel een notitie per e-mail. We houden het simpel: de app verzamelt zo weinig mogelijk, alles blijft op je telefoon, en Adiso heeft geen eigen servers waar jouw gegevens langskomen.</p>
 
@@ -42,6 +42,16 @@
       </ul>
       <p>Deze gegevens worden alleen op je telefoon gebruikt, niet naar Adiso of anderen gestuurd, niet verkocht, niet gebruikt voor advertenties en niet gebruikt om AI-modellen te trainen.</p>
       <p>Het gebruik en de overdracht van informatie die Note to Self van Google API's ontvangt, voldoet aan het <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, inclusief de Limited Use-vereisten.</p>
+
+      <h2>Hoe we je gegevens beschermen</h2>
+      <ul>
+        <li><strong>Versleuteld onderweg.</strong> Alle verbindingen met Google (inloggen, Gmail API) gaan via HTTPS met TLS-versleuteling. Ook link-voorbeelden worden zo veel mogelijk via HTTPS opgehaald.</li>
+        <li><strong>Geen opslag van Google-wachtwoorden of -tokens door de app.</strong> Inloggen en toestemming lopen via Google Play-services. De app krijgt alleen een kortlevend toegangstoken, gebruikt dat direct om de notitie te versturen en bewaart het niet zelf.</li>
+        <li><strong>Versleutelde opslag van je SMTP-wachtwoord.</strong> Gebruik je een eigen mailserver, dan wordt je wachtwoord versleuteld met AES-GCM, met een sleutel die in de beveiligde Android Keystore van je telefoon blijft en de telefoon niet kan verlaten. De verbinding met je mailserver is versleuteld met SSL/TLS of STARTTLS, tenzij je in de instellingen zelf bewust voor een onversleutelde verbinding kiest.</li>
+        <li><strong>Afgeschermde opslag op je telefoon.</strong> Instellingen en nog niet verstuurde notities staan in de privé-opslag van de app, waar andere apps niet bij kunnen. Verstuurde notities worden direct van de telefoon verwijderd.</li>
+        <li><strong>Geen back-ups naar de cloud.</strong> De app sluit zijn gegevens uit van Android-back-ups, zodat ze je telefoon niet verlaten.</li>
+        <li><strong>Minimale rechten.</strong> De app vraagt alleen het recht om mail te versturen en je e-mailadres te zien; geen toegang tot je mailbox, contacten of andere gegevens.</li>
+      </ul>
 
       <h2>Diensten van derden</h2>
       <p>Voor inloggen en versturen gebruikt de app Google Play-services en de Gmail API van Google. Daarvoor geldt ook het <a href="https://policies.google.com/privacy">privacybeleid van Google</a>. Verder bevat de app geen diensten van derden voor analyse of advertenties.</p>
